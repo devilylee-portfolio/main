@@ -3,11 +3,11 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const SKILL_ICONS = "https://cdn.simpleicons.org";
-const skills = [
+const skills: { name: string; iconUrl: string; highlighted?: boolean }[] = [
 	{
 		name: "TypeScript",
 		iconUrl: `${SKILL_ICONS}/typescript/3178C6`,
-		// highlighted: true,
+		highlighted: true,
 	},
 	{ name: "React", iconUrl: `${SKILL_ICONS}/react/61DAFB` },
 	{ name: "Next.js", iconUrl: `${SKILL_ICONS}/nextdotjs/000000` },

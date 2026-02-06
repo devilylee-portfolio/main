@@ -14,16 +14,15 @@ function ProjectCard({
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <Link
-      ref={ref}
-      href={`/projects/${project.id}`}
-      className={`group block rounded-xl border-2 border-black p-6 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-        isVisible
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 translate-y-8"
-      }`}
-      style={{ transitionDelay: `${index * 100}ms` }}
-    >
+    <div ref={ref} style={{ transitionDelay: `${index * 100}ms` }}>
+      <Link
+        href={`/projects/${project.id}`}
+        className={`group block rounded-xl border-2 border-black p-6 hover:bg-black hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+          isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-8"
+        }`}
+      >
       <h3 className="text-xl font-bold mb-2 group-hover:underline transition-all">
         {project.title}
       </h3>
@@ -41,6 +40,7 @@ function ProjectCard({
         ))}
       </div>
     </Link>
+    </div>
   );
 }
 
