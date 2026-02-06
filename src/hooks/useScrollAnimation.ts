@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 export function useScrollAnimation(options?: IntersectionObserverInit) {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
