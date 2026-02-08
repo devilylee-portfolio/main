@@ -29,7 +29,7 @@ function SkillCard({
 	highlighted: boolean;
 	index: number;
 }) {
-	const { ref, isVisible } = useScrollAnimation();
+	const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
 
 	return (
 		<div
@@ -66,7 +66,7 @@ function SkillCard({
 }
 
 export default function Skills() {
-	const { ref, isVisible } = useScrollAnimation();
+	const { ref, isVisible } = useScrollAnimation<HTMLHeadingElement>();
 
 	return (
 		<section id="skills" className="bg-white text-black py-20">

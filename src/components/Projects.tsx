@@ -11,7 +11,7 @@ function ProjectCard({
   project: (typeof projects)[0];
   index: number;
 }) {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
 
   return (
     <div ref={ref} style={{ transitionDelay: `${index * 100}ms` }}>
@@ -45,7 +45,7 @@ function ProjectCard({
 }
 
 export default function Projects() {
-  const { ref, isVisible } = useScrollAnimation();
+  const { ref, isVisible } = useScrollAnimation<HTMLHeadingElement>();
 
   return (
     <section id="projects" className="bg-white text-black py-20">

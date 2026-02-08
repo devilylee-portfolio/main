@@ -37,7 +37,7 @@ function ExperienceCard({
 	exp: (typeof experiences)[0];
 	index: number;
 }) {
-	const { ref, isVisible } = useScrollAnimation();
+	const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
 
 	return (
 		<div
@@ -69,7 +69,7 @@ function ExperienceCard({
 }
 
 export default function Experience() {
-	const { ref, isVisible } = useScrollAnimation();
+	const { ref, isVisible } = useScrollAnimation<HTMLHeadingElement>();
 
 	return (
 		<section id="experience" className="bg-dark text-white py-20">
