@@ -46,9 +46,9 @@ export default function Header() {
 					href="/"
 					className="flex items-center gap-2 font-semibold text-lg transition-transform duration-300 hover:scale-105">
 					<span className="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-lg font-bold transition-transform duration-300 hover:rotate-12">
-						P
+						LL
 					</span>
-					Personal
+					Lily Lee
 				</Link>
 				<nav className="hidden md:flex items-center gap-8">
 					{navLinks.map(({ href, label }) => (
