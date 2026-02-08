@@ -1,4 +1,4 @@
-# Lily Lee — Portfolio
+# Lily Lee
 
 Hello, I'm **Lily Lee**, a frontend developer with a Computer Science background. I build web and mobile platforms using React, React Native, TypeScript, Node.js, and AWS. I care about clear architecture (Domain-Driven Design), performance, and shipping features end-to-end—especially in fast-moving startup environments.
 
