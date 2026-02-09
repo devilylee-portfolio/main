@@ -39,19 +39,11 @@ export default function Hero() {
 									? "opacity-100 translate-y-0"
 									: "opacity-0 translate-y-4"
 							}`}>
-							<span className="font-bold">Frontend </span>
+							<span className="font-bold">Frontend-Fullstack </span>
 							<span className="hero-outline-text font-bold text-4xl md:text-5xl lg:text-6xl">
 								Developer
 							</span>
 						</h2>
-						{/* <h3
-							className={`text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mt-1 transition-all duration-500 delay-300 ${
-								isVisible
-									? "opacity-100 translate-y-0"
-									: "opacity-0 translate-y-4"
-							}`}>
-							Based in Virginia.
-						</h3> */}
 					</div>
 
 					<p
@@ -60,11 +52,12 @@ export default function Hero() {
 								? "opacity-100 translate-y-0"
 								: "opacity-0 translate-y-4"
 						}`}>
-						Computer Science graduate with experience building web and mobile
-						platforms using React, React Native, TypeScript, Node.js, and AWS.
-						Strong foundation in frontend architecture, Domain-Driven Design
-						(DDD), performance optimization, and deployment, with hands-on
-						experience owning features end-to-end in startup environments.
+						Founding team software engineer with experience building web and
+						mobile platforms using React, React Native, TypeScript, Node.js, and
+						AWS. Strong foundation in frontend architecture, Domain-Driven
+						Design (DDD), performance optimization, and deployment, with
+						hands-on experience owning features end-to-end in startup
+						environments.
 					</p>
 
 					<div

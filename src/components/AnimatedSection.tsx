@@ -16,7 +16,7 @@ export default function AnimatedSection({
   animationType = "fade-up",
   delay = 0,
 }: AnimatedSectionProps) {
-  const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
+  const { ref, isVisible } = useScrollAnimation();
 
   const animationClass = {
     "fade-up": "scroll-fade-up",

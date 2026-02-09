@@ -3,170 +3,162 @@
 @tailwind utilities;
 
 :root {
-	--dark: #1a1a1a;
-	--dark-card: #2d2d2d;
+  --dark: #1a1a1a;
+  --dark-card: #2d2d2d;
 }
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	font-family:
-		system-ui,
-		-apple-system,
-		BlinkMacSystemFont,
-		"Segoe UI",
-		Roboto,
-		sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 /* Hollow/outline text for hero "Developer" */
 .hero-outline-text {
-	color: white;
-	-webkit-text-stroke: 2px black;
-	paint-order: stroke fill;
+  color: white;
+  -webkit-text-stroke: 2px black;
+  paint-order: stroke fill;
 }
 
 /* Animation classes */
 @keyframes fadeInUp {
-	from {
-		opacity: 0;
-		transform: translateY(30px);
-	}
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
-	from {
-		opacity: 0;
-		transform: scale(0.9);
-	}
-	to {
-		opacity: 1;
-		transform: scale(1);
-	}
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes slideInLeft {
-	from {
-		opacity: 0;
-		transform: translateX(-30px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes slideInRight {
-	from {
-		opacity: 0;
-		transform: translateX(30px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .animate-fade-in-up {
-	animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .animate-fade-in {
-	animation: fadeIn 0.8s ease-out forwards;
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 .animate-scale-in {
-	animation: scaleIn 0.6s ease-out forwards;
+  animation: scaleIn 0.6s ease-out forwards;
 }
 
 .animate-slide-in-left {
-	animation: slideInLeft 0.7s ease-out forwards;
+  animation: slideInLeft 0.7s ease-out forwards;
 }
 
 .animate-slide-in-right {
-	animation: slideInRight 0.7s ease-out forwards;
+  animation: slideInRight 0.7s ease-out forwards;
 }
 
 /* Scroll-triggered animations */
 .scroll-animate {
-	opacity: 0;
-	transition:
-		opacity 0.6s ease-out,
-		transform 0.6s ease-out;
+  opacity: 0;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .scroll-animate.visible {
-	opacity: 1;
+  opacity: 1;
 }
 
 .scroll-fade-up {
-	transform: translateY(30px);
+  transform: translateY(30px);
 }
 
 .scroll-fade-up.visible {
-	transform: translateY(0);
+  transform: translateY(0);
 }
 
 .scroll-fade-left {
-	transform: translateX(-30px);
+  transform: translateX(-30px);
 }
 
 .scroll-fade-left.visible {
-	transform: translateX(0);
+  transform: translateX(0);
 }
 
 .scroll-fade-right {
-	transform: translateX(30px);
+  transform: translateX(30px);
 }
 
 .scroll-fade-right.visible {
-	transform: translateX(0);
+  transform: translateX(0);
 }
 
 .scroll-scale {
-	transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .scroll-scale.visible {
-	transform: scale(1);
+  transform: scale(1);
 }
 
 /* Stagger delay utilities */
 .delay-100 {
-	animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .delay-200 {
-	animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
 .delay-300 {
-	animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
 
 .delay-400 {
-	animation-delay: 0.4s;
+  animation-delay: 0.4s;
 }
 
 .delay-500 {
-	animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
 
 .delay-600 {
-	animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }

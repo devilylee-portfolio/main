@@ -2,34 +2,38 @@
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
-const SKILL_ICONS = "https://cdn.simpleicons.org";
-const skills: { name: string; iconUrl: string; highlighted?: boolean }[] = [
+// Simple Icons CDN: slug and brand color (hex without #)
+const skills = [
 	{
 		name: "TypeScript",
-		iconUrl: `${SKILL_ICONS}/typescript/3178C6`,
+		iconSlug: "typescript",
+		color: "3178C6",
 		highlighted: true,
 	},
-	{ name: "React", iconUrl: `${SKILL_ICONS}/react/61DAFB` },
-	{ name: "Next.js", iconUrl: `${SKILL_ICONS}/nextdotjs/000000` },
-	{ name: "Node.js", iconUrl: `${SKILL_ICONS}/nodedotjs/339933` },
-	{ name: "React Native", iconUrl: `${SKILL_ICONS}/react/61DAFB` },
-	// { name: "AWS", iconUrl: `${SKILL_ICONS}/amazonaws/232F3E` },
-	{ name: "Python", iconUrl: `${SKILL_ICONS}/python/3776AB` },
-	{ name: "PostgreSQL", iconUrl: `${SKILL_ICONS}/postgresql/4169E1` },
+	{ name: "React", iconSlug: "react", color: "61DAFB" },
+	{ name: "Next.js", iconSlug: "nextdotjs", color: "000000" },
+	{ name: "Node.js", iconSlug: "nodedotjs", color: "339933" },
+	{ name: "React Native", iconSlug: "react", color: "61DAFB" },
+	// { name: "AWS", iconSlug: "amazonaws", color: "FF9900" },
+	{ name: "Python", iconSlug: "python", color: "3776AB" },
+	{ name: "PostgreSQL", iconSlug: "postgresql", color: "4169E1" },
 ];
 
 function SkillCard({
 	name,
-	iconUrl,
+	iconSlug,
+	color,
 	highlighted,
 	index,
 }: {
 	name: string;
-	iconUrl: string | null;
+	iconSlug: string;
+	color: string;
 	highlighted: boolean;
 	index: number;
 }) {
-	const { ref, isVisible } = useScrollAnimation<HTMLDivElement>();
+	const { ref, isVisible } = useScrollAnimation();
+	const iconUrl = `https://cdn.simpleicons.org/${iconSlug}/${highlighted ? "FFFFFF" : color}`;
 
 	return (
 		<div
@@ -44,19 +48,15 @@ function SkillCard({
 					: "opacity-0 translate-y-8 scale-95"
 			}`}
 			style={{ transitionDelay: `${index * 50}ms` }}>
-			<div className="w-14 h-14 md:w-16 md:h-16 mb-3 flex items-center justify-center transition-transform duration-300 hover:scale-110">
-				{iconUrl ? (
-					<img
-						src={iconUrl}
-						alt=""
-						className="w-full h-full object-contain"
-						aria-hidden
-					/>
-				) : (
-					<span className="text-4xl md:text-5xl font-bold">
-						{name.slice(0, 2).toUpperCase()}
-					</span>
-				)}
+			<div className="relative w-12 h-12 md:w-14 md:h-14 mb-3 transition-transform duration-300 hover:scale-110 flex-shrink-0">
+				{/* eslint-disable-next-line @next/next/no-img-element */}
+				<img
+					src={iconUrl}
+					alt=""
+					width={56}
+					height={56}
+					className="w-full h-full object-contain"
+				/>
 			</div>
 			<span className="text-sm md:text-base font-semibold text-center">
 				{name}
@@ -66,7 +66,7 @@ function SkillCard({
 }
 
 export default function Skills() {
-	const { ref, isVisible } = useScrollAnimation<HTMLHeadingElement>();
+	const { ref, isVisible } = useScrollAnimation();
 
 	return (
 		<section id="skills" className="bg-white text-black py-20">
@@ -79,12 +79,13 @@ export default function Skills() {
 					My Skills
 				</h2>
 				<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto">
-					{skills.map(({ name, iconUrl, highlighted = false }, index) => (
+					{skills.map(({ name, iconSlug, color, highlighted }, index) => (
 						<SkillCard
 							key={name}
 							name={name}
-							iconUrl={iconUrl}
-							highlighted={highlighted}
+							iconSlug={iconSlug}
+							color={color}
+							highlighted={highlighted ?? false}
 							index={index}
 						/>
 					))}

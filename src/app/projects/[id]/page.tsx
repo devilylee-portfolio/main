@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
 import Header from "@/components/Header";
@@ -43,12 +44,74 @@ export default function ProjectPage({
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             {project.title}
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 mb-6">
             {project.shortDescription}
           </p>
-          <p className="text-gray-700 leading-relaxed mb-8">
-            {project.description}
-          </p>
+          {project.image && (
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-8 bg-gray-100">
+              <Image
+                src={project.image}
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 672px"
+                priority
+              />
+            </div>
+          )}
+          {project.gallery && project.gallery.length > 0 && (
+            <div className="mb-8 space-y-6">
+              <h3 className="text-lg font-semibold text-black">
+                Research &amp; data
+              </h3>
+              <div className="space-y-4">
+                {project.gallery.map((src, i) => (
+                  <div
+                    key={i}
+                    className="relative w-full aspect-video rounded-xl overflow-hidden bg-gray-100 border border-gray-200"
+                  >
+                    <Image
+                      src={src}
+                      alt={`Research screenshot ${i + 1}`}
+                      fill
+                      className="object-contain"
+                      sizes="(max-width: 768px) 100vw, 672px"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          <div className="text-gray-700 leading-relaxed mb-8 space-y-4 [&_strong]:font-semibold [&_strong]:text-black [&_a]:text-dark [&_a]:underline [&_a]:break-all [&_a]:hover:opacity-80">
+            {project.description.split("\n\n").map((paragraph, i) => {
+              const parts = paragraph.split(/(\*\*.*?\*\*)/g);
+              const linkRegex = /(https?:\/\/[^\s]+)/g;
+              return (
+                <p key={i} className="whitespace-pre-line">
+                  {parts.map((part, j) =>
+                    /^\*\*.*\*\*$/.test(part) ? (
+                      <strong key={j}>{part.slice(2, -2)}</strong>
+                    ) : (
+                      part.split(linkRegex).map((bit, k) =>
+                        /^https?:\/\//.test(bit) ? (
+                          <a
+                            key={k}
+                            href={bit}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {bit}
+                          </a>
+                        ) : (
+                          bit
+                        )
+                      )
+                    )
+                  )}
+                </p>
+              );
+            })}
+          </div>
           <div className="flex flex-wrap gap-2 mb-8">
             {project.tech.map((t) => (
               <span

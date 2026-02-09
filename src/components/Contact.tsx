@@ -3,7 +3,7 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export default function Contact() {
-	const { ref, isVisible } = useScrollAnimation<HTMLHeadingElement>();
+	const { ref, isVisible } = useScrollAnimation();
 
 	return (
 		<section id="contact" className="bg-dark text-white py-20">

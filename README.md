@@ -1,10 +1,6 @@
-# Lily Lee
+# Portfolio
 
-Hello, I'm **Lily Lee**, a frontend developer with a Computer Science background. I build web and mobile platforms using React, React Native, TypeScript, Node.js, and AWS. I care about clear architecture (Domain-Driven Design), performance, and shipping features end-to-end—especially in fast-moving startup environments.
-
-This repo is my **portfolio site**: a minimal, responsive single-page built with **Next.js 14**, TypeScript, and Tailwind CSS. It showcases my skills, projects, and experience. The structure is set up to grow into a fuller fullstack setup (API routes, server actions, database) when needed.
-
----
+A minimal portfolio site built with **Next.js 14**, TypeScript, and Tailwind CSS. Structured for a future fullstack transition (API routes, server actions, DB).
 
 ## Run locally
 
@@ -22,27 +18,10 @@ npm run build
 npm start
 ```
 
----
-
-## Future implementations
-
-Planned additions and ideas for this portfolio and related products:
-
-- **More products & projects** — New case studies, side projects, and demos as I ship them.
-- **Chat / contact widget** — In-site chat or messaging so visitors can reach out without leaving the page.
-- **Newsletter or subscription** — Optional signup for updates (e.g. new projects, blog posts, or career notes).
-- **Blog or notes section** — A simple blog or “notes” area for technical writing and learnings.
-- **Dark/light theme toggle** — User preference for theme with persistence.
-- **Analytics & feedback** — Lightweight analytics and/or a simple feedback form to improve the site.
-
-Suggestions and ideas are welcome—open an issue or reach out via the contact links on the site.
-
----
-
 ## Structure
 
 - **`/`** – Home: Hero, Skills, Projects, Experience, Contact
-- **`/projects/[id]`** – Project detail pages (e.g. `/projects/gomaxpain`)
+- **`/projects/[id]`** – Project detail pages (e.g. `/projects/ecommerce-dashboard`)
 - **`src/data/projects.ts`** – Edit project list and content here
 - **`src/components/`** – Reusable sections (Header, Hero, Skills, Projects, Experience, Contact)
 
