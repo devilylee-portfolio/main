@@ -50,9 +50,14 @@ function ProjectCard({
           )}
         </div>
         <div className="p-6">
-          <h3 className="text-xl font-bold mb-2 group-hover:underline transition-all">
+          <h3 className="text-xl font-bold mb-1 group-hover:underline transition-all">
             {project.title}
           </h3>
+          {project.period && (
+            <p className="text-xs text-gray-500 group-hover:text-white/70 mb-2">
+              {project.period}
+            </p>
+          )}
           <p className="text-gray-600 group-hover:text-white/80 text-sm transition-colors">
             {project.shortDescription}
           </p>

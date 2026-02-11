@@ -4,6 +4,7 @@ export interface Project {
 	shortDescription: string;
 	description: string;
 	tech: string[];
+	period?: string;
 	image?: string;
 	/** Extra images shown on the project detail page (e.g. research screenshots) */
 	gallery?: string[];
@@ -12,47 +13,6 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-	{
-		id: "gomaxpain",
-		title: "GoMAXPAIN",
-		shortDescription:
-			"Founding software engineer on a consumer-facing web platform — frontend architecture, performance optimization, and production deployment.",
-		description:
-			"As a founding software engineer at GoMAXPAIN, I own the frontend platform end-to-end. I architected the app using Domain-Driven Design (DDD), migrated from CSR to SSR for 60% faster load times, and built a full-stack analytics dashboard aggregating data from 3+ external APIs. The platform integrates Google Maps (Places API, markers, weather overlays), secure payments, OTP & email verification, and map-based data visualizations, deployed on AWS.",
-		tech: ["React", "TypeScript", "Next.js", "AWS", "SSR", "Google Maps API"],
-		image: "/projects/Gomaxapin.png",
-		link: "https://app.gomaxpain.com/professional",
-	},
-	{
-		id: "joopi",
-		title: "Joopi",
-		shortDescription:
-			"Product management intern on a cross-platform dating app — feature definition, user research, and MVP delivery.",
-		description:
-			"At A-Round Entertainment I worked as a Technical Product Manager intern on Joopi, a cross-platform mobile dating app (React Native). I spearheaded a real-time chat feature using Firebase, improving user engagement for 100+ early testers. I coordinated across software development, UI/UX, business, and executive stakeholders on priorities, timelines, and MVP launch preparation.",
-		tech: ["React Native", "Firebase", "Product Management", "MVP"],
-		image: "/projects/Joopi.png",
-		link: "https://www.joopi.app/",
-	},
-	{
-		id: "ecommerce-platform",
-		title: "E-Commerce Platform",
-		shortDescription:
-			"Full-stack Next.js application with payments and multi-provider authentication, built and deployed on AWS.",
-		description:
-			"Launched a full-stack e-commerce platform for travel gear with PortOne payments and Google, Kakao, and Apple authentication. Built with Next.js and deployed on AWS with cloud-hosted infrastructure. Covers product catalog, cart, checkout, and admin flows.\n\nProject overview (design & scope): https://www.canva.com/design/DAHA2tI4cJc/iib30Ev7WmPyxBIbt0Lfkg/edit?utm_content=DAHA2tI4cJc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-		tech: [
-			"Next.js",
-			"AWS",
-			"PortOne",
-			"Google Auth",
-			"Kakao",
-			"Apple Sign-In",
-		],
-		image: "/projects/mannazo.png",
-		link: "https://github.com/mannazo/mannazo-nextjs",
-		repo: "https://github.com/mannazo/mannazo-nextjs",
-	},
 	{
 		id: "crumbl-reverse-engineering",
 		title: "Reverse Engineering Crumbl's Web Architecture",
@@ -98,7 +58,52 @@ Crumbl's website demonstrates: static generation for scalability, ISR for time-s
 			"React Hydration",
 			"CDN",
 		],
+		period: "Jan 2025 – Present",
 		image: "/projects/crumb-reverse.png",
+	},
+	{
+		id: "gomaxpain",
+		title: "GoMAXPAIN",
+		shortDescription:
+			"Founding software engineer on a consumer-facing web platform — frontend architecture, performance optimization, and production deployment.",
+		description:
+			"As a founding software engineer at GoMAXPAIN, I own the frontend platform end-to-end. I architected the app using Domain-Driven Design (DDD), migrated from CSR to SSR for 60% faster load times, and built a full-stack analytics dashboard aggregating data from 3+ external APIs. The platform integrates Google Maps (Places API, markers, weather overlays), secure payments, OTP & email verification, and map-based data visualizations, deployed on AWS.",
+		tech: ["React", "TypeScript", "Next.js", "AWS", "SSR", "Google Maps API"],
+		period: "Jul 2025 – Present",
+		image: "/projects/Gomaxapin.png",
+		link: "https://app.gomaxpain.com/professional",
+	},
+	{
+		id: "joopi",
+		title: "Joopi",
+		shortDescription:
+			"Product management intern on a cross-platform dating app — feature definition, user research, and MVP delivery.",
+		description:
+			"At A-Round Entertainment I worked as a Technical Product Manager intern on Joopi, a cross-platform mobile dating app (React Native). I spearheaded a real-time chat feature using Firebase, improving user engagement for 100+ early testers. I coordinated across software development, UI/UX, business, and executive stakeholders on priorities, timelines, and MVP launch preparation.",
+		tech: ["React Native", "Firebase", "Product Management", "MVP"],
+		period: "Dec 2023 – May 2024",
+		image: "/projects/Joopi.png",
+		link: "https://www.joopi.app/",
+	},
+	{
+		id: "ecommerce-platform",
+		title: "E-Commerce Platform",
+		shortDescription:
+			"Full-stack Next.js application with payments and multi-provider authentication, built and deployed on AWS. DevOps Bootcamp final project.",
+		description:
+			"Launched a full-stack e-commerce platform for travel gear with PortOne payments and Google, Kakao, and Apple authentication. Built with Next.js and deployed on AWS with cloud-hosted infrastructure. Covers product catalog, cart, checkout, and admin flows. Final project for the AWS DevOps Bootcamp.\n\nProject overview (design & scope): https://www.canva.com/design/DAHA2tI4cJc/iib30Ev7WmPyxBIbt0Lfkg/edit?utm_content=DAHA2tI4cJc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+		tech: [
+			"Next.js",
+			"AWS",
+			"PortOne",
+			"Google Auth",
+			"Kakao",
+			"Apple Sign-In",
+		],
+		period: "Jun 2024 – Aug 2024",
+		image: "/projects/mannazo.png",
+		link: "https://github.com/mannazo/mannazo-nextjs",
+		repo: "https://github.com/mannazo/mannazo-nextjs",
 	},
 	// {
 	// 	id: "sublease-web",
@@ -119,6 +124,7 @@ Crumbl's website demonstrates: static generation for scalability, ISR for time-s
 		description:
 			"Conducted primary user research (19 survey responses from international students) to identify pain points in traditional real estate leasing. Contributed to product design and frontend development for a secure mobile app enabling virtual contract signing with trusted real estate agents. Refined onboarding flows, authentication, and trust-building features for non-native users.",
 		tech: ["React Native", "User Research", "Authentication", "Product Design"],
+		period: "Jan 2025 – Mar 2025",
 		image: "/projects/response1.png",
 		gallery: ["/projects/response1.png", "/projects/response2.png"],
 	},

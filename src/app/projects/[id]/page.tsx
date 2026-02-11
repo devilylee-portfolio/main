@@ -41,9 +41,14 @@ export default function ProjectPage({
             </svg>
             Back to Projects
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">
             {project.title}
           </h1>
+          {project.period && (
+            <p className="text-sm text-gray-500 mb-4">
+              {project.period}
+            </p>
+          )}
           <p className="text-xl text-gray-600 mb-6">
             {project.shortDescription}
           </p>
